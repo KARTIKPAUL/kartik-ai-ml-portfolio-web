@@ -1,0 +1,15 @@
+@import "tailwindcss";
+/* Add this block to the TOP of your existing src/index.css
+   (keep your existing @import "tailwindcss"; line below these font imports) */
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #0a0c10;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
