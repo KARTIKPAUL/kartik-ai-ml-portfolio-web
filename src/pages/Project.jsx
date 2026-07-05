@@ -14,6 +14,7 @@ import {
 import NotebookCell from "../components/NotebookCell/NotebookCell";
 import steps from "../projects/zomato/steps";
 import project from "../projects/zomato/project";
+import { getImage } from "../projects/zomato/images";
 
 export default function Project() {
   const [startLearning, setStartLearning] = useState(false);
@@ -180,7 +181,11 @@ export default function Project() {
               description={steps[currentStep].description}
               code={steps[currentStep].code}
               outputType={steps[currentStep].outputType}
-              output={`/src/projects/zomato/images/${steps[currentStep].output}`}
+              output={
+                steps[currentStep].outputType === "image"
+                  ? getImage(steps[currentStep].output)
+                  : steps[currentStep].output
+              }
               initiallyCompleted={currentStep < unlockedUpTo}
               onNext={() => {
                 if (currentStep < steps.length - 1) {
