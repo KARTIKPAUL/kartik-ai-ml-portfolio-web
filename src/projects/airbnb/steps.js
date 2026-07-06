@@ -46,7 +46,7 @@ df.dropna(subset=['NAME', 'host name'], inplace=True)
 
 print(df.isnull().sum())`,
     outputType: "image",
-    output: "step44.png",
+    output: "step4.png",
   },
 
   {
@@ -59,7 +59,7 @@ df['service fee'] = df['service fee'].replace(r'[\\$,]', '', regex=True).astype(
 
 print(df.isnull().sum())`,
     outputType: "image",
-    output: "step555.png",
+    output: "step6.png",
   },
 
   {
@@ -69,7 +69,7 @@ print(df.isnull().sum())`,
     code: `df.drop_duplicates(inplace=True)
 print(df.isnull().sum())`,
     outputType: "image",
-    output: "step555.png",
+    output: "step6.png",
   },
 
   {
@@ -78,7 +78,7 @@ print(df.isnull().sum())`,
     description: "Review the cleaned dataframe's structure and dtypes.",
     code: `print(df.info())`,
     outputType: "image",
-    output: "step4.png",
+    output: "step7.png",
   },
 
   {
@@ -87,7 +87,7 @@ print(df.isnull().sum())`,
     description: "Generate summary statistics across all numeric columns.",
     code: `print(df.describe())`,
     outputType: "image",
-    output: "step5.png",
+    output: "step8.png",
   },
 
   {
@@ -101,7 +101,7 @@ plt.xlabel('Price ($)')
 plt.ylabel('Frequency')
 plt.show()`,
     outputType: "image",
-    output: "step6.png",
+    output: "step9.png",
   },
 
   {
@@ -115,7 +115,7 @@ plt.xlabel('Room Type')
 plt.ylabel('Count')
 plt.show()`,
     outputType: "image",
-    output: "step7.png",
+    output: "step10.png",
   },
 
   {
@@ -134,7 +134,7 @@ plt.xlabel('Count')
 plt.ylabel('Neighborhood Group')
 plt.show()`,
     outputType: "image",
-    output: "step8.png",
+    output: "step11.png",
   },
   {
     id: 12,
@@ -148,7 +148,7 @@ plt.ylabel('Price ($)')
 plt.legend(title='Room Type')
 plt.show()`,
     outputType: "image",
-    output: "step9.png",
+    output: "step12.png",
   },
   {
     id: 13,
@@ -161,7 +161,7 @@ plt.xlabel('Date')
 plt.ylabel('Number of Reviews')
 plt.show()`,
     outputType: "image",
-    output: "step10.png",
+    output: "step13.png",
   },
 ];
 
