@@ -15,22 +15,22 @@ const projects = [
     available: true,
   },
   {
+    id: "airbnb",
+    title: "Airbnb Booking Analysis",
+    file: "airbnb-booking-analysis-using-eda.ipynb",
+    difficulty: "Intermediate",
+    category: "EDA",
+    tech: ["Python", "Pandas", "Seaborn"],
+    path: "/project/airbnb",
+    available: true,
+  },
+  {
     id: "ipl",
     title: "IPL 2023 Data Analysis",
     file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",
     difficulty: "Intermediate",
     category: "Data Analytics",
     tech: ["Python", "Pandas AI"],
-    path: "#",
-    available: false,
-  },
-  {
-    id: "airbnb",
-    title: "Airbnb Booking Analysis",
-    file: "airbnb-booking-analysis-using-eda.ipynb",
-    difficulty: "Intermediate",
-    category: "EDA",
-    tech: ["Python", "EDA"],
     path: "#",
     available: false,
   },
@@ -78,8 +78,8 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-4 text-[#8B93A1] max-w-xl leading-relaxed"
         >
-          Real notebooks, walked step by step — every cell, every chart,
-          every decision. Open a project below to run it interactively.
+          Real notebooks, walked step by step — every cell, every chart, every
+          decision. Open a project below to run it interactively.
         </motion.p>
 
         {/* project grid */}

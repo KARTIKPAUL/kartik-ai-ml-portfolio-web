@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   FiPlay,
@@ -10,19 +11,47 @@ import {
   FiChevronLeft,
   FiChevronRight,
   FiLock,
+  FiAlertTriangle,
 } from "react-icons/fi";
 import NotebookCell from "../components/NotebookCell/NotebookCell";
-import steps from "../projects/zomato/steps";
-import project from "../projects/zomato/project";
-import { getImage } from "../projects/zomato/images";
+import registry from "../projects/registry";
 
 export default function Project() {
+  const { projectId } = useParams();
+  const entry = registry[projectId];
+
   const [startLearning, setStartLearning] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
-  // furthest index the user has unlocked by completing steps in order.
-  // any step at or before this index can be revisited freely.
   const [unlockedUpTo, setUnlockedUpTo] = useState(0);
 
+  // Reset all progress whenever the user navigates to a different project.
+  useEffect(() => {
+    setStartLearning(false);
+    setCurrentStep(0);
+    setUnlockedUpTo(0);
+  }, [projectId]);
+
+  if (!entry) {
+    return (
+      <div className="min-h-screen bg-[#0A0C10] text-[#E7E9EE] flex items-center justify-center px-6">
+        <div className="text-center max-w-md">
+          <FiAlertTriangle size={28} className="mx-auto text-[#F5A623]" />
+          <h1 className="mt-4 text-2xl font-bold">Project not found</h1>
+          <p className="mt-2 text-[#8B93A1] text-sm">
+            "{projectId}" doesn't match any project in the registry yet.
+          </p>
+          <Link
+            to="/"
+            className="mt-6 inline-block px-5 py-2.5 rounded-lg bg-[#8B7CF6] text-white font-mono text-sm font-semibold hover:brightness-110 transition"
+          >
+            Back to portfolio
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const { project, steps, getImage } = entry;
   const progressPct = Math.round(((currentStep + 1) / steps.length) * 100);
 
   const goToStep = (index) => {
@@ -33,7 +62,7 @@ export default function Project() {
   return (
     <div className="min-h-screen bg-[#0A0C10] text-[#E7E9EE]">
       <div className="max-w-6xl mx-auto px-6 py-14 grid lg:grid-cols-[260px_1fr] gap-8">
-        {/* Sidebar: read-only step tracker */}
+        {/* Sidebar: navigable step tracker */}
         <aside className="hidden lg:block">
           <div className="sticky top-10">
             <p className="font-mono text-xs text-[#8B93A1] mb-4 uppercase tracking-wider">
