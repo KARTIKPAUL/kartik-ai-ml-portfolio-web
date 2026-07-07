@@ -24,15 +24,25 @@ const projects = [
     path: "/project/airbnb",
     available: true,
   },
+  // {
+  //   id: "ipl",
+  //   title: "IPL 2023 Data Analysis",
+  //   file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",
+  //   difficulty: "Intermediate",
+  //   category: "Data Analytics",
+  //   tech: ["Python", "Pandas AI"],
+  //   path: "#",
+  //   available: false,
+  //},
   {
-    id: "ipl",
-    title: "IPL 2023 Data Analysis",
-    file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",
+    id: "covid",
+    title: "COVID-19 Global Data Analysis",
+    file: "covid-19-global-data-analysis.ipynb",
     difficulty: "Intermediate",
-    category: "Data Analytics",
-    tech: ["Python", "Pandas AI"],
-    path: "#",
-    available: false,
+    category: "Data Visualization",
+    tech: ["Python", "Pandas", "Plotly"],
+    path: "/project/covid",
+    available: true, // flip to true once covid-step-01.png ... 12.png exist
   },
 ];
 
@@ -78,8 +88,8 @@ export default function Home() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-4 text-[#8B93A1] max-w-xl leading-relaxed"
         >
-          Real notebooks, walked step by step — every cell, every chart, every
-          decision. Open a project below to run it interactively.
+          Real notebooks, walked step by step — every cell, every chart,
+          every decision. Open a project below to run it interactively.
         </motion.p>
 
         {/* project grid */}
