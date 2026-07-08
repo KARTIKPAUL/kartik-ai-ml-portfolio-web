@@ -24,16 +24,6 @@ const projects = [
     path: "/project/airbnb",
     available: true,
   },
-  // {
-  //   id: "ipl",
-  //   title: "IPL 2023 Data Analysis",
-  //   file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",
-  //   difficulty: "Intermediate",
-  //   category: "Data Analytics",
-  //   tech: ["Python", "Pandas AI"],
-  //   path: "#",
-  //   available: false,
-  //},
   {
     id: "covid",
     title: "COVID-19 Global Data Analysis",
@@ -44,6 +34,27 @@ const projects = [
     path: "/project/covid",
     available: true, // flip to true once covid-step-01.png ... 12.png exist
   },
+  {
+    id: "imdb",
+    title: "IMDb Top 250 — Scraping & Analysis",
+    file: "fresh-imdb-scraping.ipynb",
+    difficulty: "Advanced",
+    category: "Web Scraping",
+    tech: ["Python", "Selenium", "Plotly"],
+    path: "/project/imdb",
+    available: true, // flip to true once imdb-step-01.png ... 12.png exist
+  },
+  {
+    id: "ipl",
+    title: "IPL 2023 Data Analysis",
+    file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",
+    difficulty: "Intermediate",
+    category: "Data Analytics",
+    tech: ["Python", "Pandas AI"],
+    path: "#",
+    available: false,
+  },
+
 ];
 
 export default function Home() {
