@@ -14,6 +14,10 @@ import imdbProject from "./imdb/project";
 import imdbSteps from "./imdb/steps";
 import { getImage as getImdbImage } from "./imdb/images";
 
+import spamProject from "./email-spam-detection/project";
+import spamSteps from "./email-spam-detection/steps";
+import { getImage as getSpamImage } from "./email-spam-detection/images";
+
 // Add a new entry here every time you finish a new project folder.
 // Each entry needs: project.js (metadata), steps.js (notebook cells),
 // and images.js (the getImage lookup helper).
@@ -37,6 +41,11 @@ const registry = {
     project: imdbProject,
     steps: imdbSteps,
     getImage: getImdbImage,
+  },
+  "email-spam-detection": {
+    project: spamProject,
+    steps: spamSteps,
+    getImage: getSpamImage,
   },
 };
 

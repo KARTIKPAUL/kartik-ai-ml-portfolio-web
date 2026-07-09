@@ -45,6 +45,16 @@ const projects = [
     available: true, // flip to true once imdb-step-01.png ... 12.png exist
   },
   {
+    id: "email-spam-detection",
+    title: "Email/Chat Spam Detection using LSTM",
+    file: "email-spam-detection-lstm.ipynb",
+    difficulty: "Advanced",
+    category: "Natural Language Processing",
+    tech: ["Python", "TensorFlow", "NLTK"],
+    path: "/project/email-spam-detection",
+    available: true, // flip to true once spam-step-01.png ... 12.png exist
+  },
+  {
     id: "ipl",
     title: "IPL 2023 Data Analysis",
     file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",
