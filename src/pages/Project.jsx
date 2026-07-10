@@ -14,6 +14,7 @@ import {
   FiAlertTriangle,
 } from "react-icons/fi";
 import NotebookCell from "../components/NotebookCell/NotebookCell";
+import SentimentTester from "../components/SentimentTester/SentimentTester";
 import registry from "../projects/registry";
 
 export default function Project() {
@@ -202,7 +203,11 @@ export default function Project() {
             </div>
           )}
 
-          {startLearning && (
+          {startLearning && steps[currentStep].type === "interactive" && (
+            <SentimentTester step={steps[currentStep].id} />
+          )}
+
+          {startLearning && steps[currentStep].type !== "interactive" && (
             <NotebookCell
               key={steps[currentStep].id}
               step={steps[currentStep].id}

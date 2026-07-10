@@ -55,6 +55,16 @@ const projects = [
     available: true, // flip to true once spam-step-01.png ... 12.png exist
   },
   {
+    id: "flipkart-review-analysis",
+    title: "Flipkart Review Sentiment Analysis",
+    file: "flipkart-review-sentiment-analysis.ipynb",
+    difficulty: "Intermediate",
+    category: "Natural Language Processing",
+    tech: ["Python", "Scikit-learn", "NLTK"],
+    path: "/project/flipkart-review-analysis",
+    available: true, // flip to true once flipkart-step-01.png ... 12.png exist
+  },
+  {
     id: "ipl",
     title: "IPL 2023 Data Analysis",
     file: "ipl-2023-data-analysis-using-pandas-ai.ipynb",

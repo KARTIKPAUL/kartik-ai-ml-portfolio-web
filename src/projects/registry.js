@@ -18,6 +18,10 @@ import spamProject from "./email-spam-detection/project";
 import spamSteps from "./email-spam-detection/steps";
 import { getImage as getSpamImage } from "./email-spam-detection/images";
 
+import flipkartProject from "./flipkart-review-analysis/project";
+import flipkartSteps from "./flipkart-review-analysis/steps";
+import { getImage as getFlipkartImage } from "./flipkart-review-analysis/images";
+
 // Add a new entry here every time you finish a new project folder.
 // Each entry needs: project.js (metadata), steps.js (notebook cells),
 // and images.js (the getImage lookup helper).
@@ -46,6 +50,11 @@ const registry = {
     project: spamProject,
     steps: spamSteps,
     getImage: getSpamImage,
+  },
+  "flipkart-review-analysis": {
+    project: flipkartProject,
+    steps: flipkartSteps,
+    getImage: getFlipkartImage,
   },
 };
 
