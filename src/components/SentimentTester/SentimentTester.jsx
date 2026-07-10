@@ -170,9 +170,9 @@ export default function SentimentTester({ step = 12 }) {
                       <p className="font-mono text-sm text-[#3EE8B8] font-semibold">
                         Positive Review 😊
                       </p>
-                      <p className="text-xs text-[#8B93A1] mt-0.5">
+                      {/* <p className="text-xs text-[#8B93A1] mt-0.5">
                         Detected favorable language in your text.
-                      </p>
+                      </p> */}
                     </div>
                   </div>
                 )}
